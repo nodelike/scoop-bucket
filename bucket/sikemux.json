@@ -1,0 +1,39 @@
+{
+  "version": "0.6.2",
+  "description": "A whole team of AI coders, in one window",
+  "homepage": "https://sikemux.com",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/nodelike/sikemux/releases/download/v0.6.2/Sikemux_0.6.2_x64-setup.exe",
+      "hash": "9b765e10ada438fb603cbfa67734823bf8109b8cff358dc833381dff4b8fe11e"
+    },
+    "arm64": {
+      "url": "https://github.com/nodelike/sikemux/releases/download/v0.6.2/Sikemux_0.6.2_arm64-setup.exe",
+      "hash": "bf8cc8900f94682d54a1cf0912cd528b891e72a6646d1e7e376415ea333cf99a"
+    }
+  },
+  "innosetup": true,
+  "bin": [
+    "sikemux.exe"
+  ],
+  "shortcuts": [
+    [
+      "sikemux.exe",
+      "Sikemux"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/nodelike/sikemux"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/nodelike/sikemux/releases/download/v$version/Sikemux_$version_x64-setup.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/nodelike/sikemux/releases/download/v$version/Sikemux_$version_arm64-setup.exe"
+      }
+    }
+  }
+}
